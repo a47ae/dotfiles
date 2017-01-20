@@ -1,0 +1,72 @@
+URxvt.geometry: 180x60
+
+Xcursor.theme: DMZ-White
+
+URxvt.font:                xft:Iosevka:pixelsize=13
+URxvt.boldFont:            xft:Iosevka:pixelsize=13:bold
+URxvt.italicFont:          xft:Iosevka:pixelsize=13:italic
+URxvt.boldItalicFont:      xft:Iosevka:pixelsize=13:bold:italic
+URxvt.letterSpace:         -1
+
+URxvt.transparent:   false
+URxvt.tintColor:     white
+URxvt.shading:       20 
+
+!black
+URxvt*color0:              #000000
+!red
+URxvt*color1:              #e5663d
+!green
+URxvt*color2:              #7cc64a
+!yellow
+URxvt*color3:              #ebdc39
+!blue
+URxvt*color4:              #2f88fd
+!magenta
+URxvt*color5:              #f775c5
+!cyan
+URxvt*color6:              #42bfe1
+!white
+URxvt*color7:              #d1d4e0
+!bright-black
+URxvt*color8:              #686868
+!bright-red
+URxvt*color9:              #e99377
+!bright-green
+URxvt*color10:             #8fc36c
+!bright-yellow
+URxvt*color11:             #fffc67
+!bright-blue
+URxvt*color12:             #6ea3f6
+!bright-magenta
+URxvt*color13:             #fd9acc
+!bright-cyan
+URxvt*color14:             #88d7ec
+!bright-white
+URxvt*color15:             #ffffff
+
+URxvt*background:          #151e32
+URxvt*foreground:          #c7c8d2
+URxvt*cursorColor:         #ffffff
+
+URxvt.internalBorder:      15
+URxvt.externalBorder:      0
+
+URxvt.scrollBar:           false
+
+URxvt*fading:              30
+
+URxvt.keysym.F11:          perl:fullscreen:switch
+
+URxvt.url-launcher:        /usr/bin/chromium
+URxvt.keysym.M-Delete:     perl:matcher:list
+URxvt.colorUL:             #7780a1
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
