@@ -11,7 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git archlinux composer tmuxinator wd)
+plugins=(git archlinux composer tmuxinator wd ssh-agent)
 
 # User configuration
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin"
