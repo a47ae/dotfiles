@@ -1,5 +1,5 @@
 # Path to oh-my-zsh installation.
- export ZSH=/home/robinschreiner/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Name of the theme to load.
 ZSH_THEME="ys"
@@ -14,7 +14,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(git archlinux composer tmuxinator wd ssh-agent)
 
 # User configuration
-export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin"
+export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
