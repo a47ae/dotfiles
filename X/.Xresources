@@ -2,10 +2,10 @@ URxvt.geometry: 180x60
 
 Xcursor.theme: DMZ-White
 
-URxvt.font:                xft:Iosevka:pixelsize=13
-URxvt.boldFont:            xft:Iosevka:pixelsize=13:bold
-URxvt.italicFont:          xft:Iosevka:pixelsize=13:italic
-URxvt.boldItalicFont:      xft:Iosevka:pixelsize=13:bold:italic
+URxvt.font:                xft:Iosevka:pixelsize=15
+URxvt.boldFont:            xft:Iosevka:pixelsize=15:bold
+URxvt.italicFont:          xft:Iosevka:pixelsize=15:italic
+URxvt.boldItalicFont:      xft:Iosevka:pixelsize=15:bold:italic
 URxvt.letterSpace:         -1
 
 URxvt.transparent:   false
@@ -45,9 +45,9 @@ URxvt*color14:             #88d7ec
 !bright-white
 URxvt*color15:             #ffffff
 
-URxvt*background:          #151e32
-URxvt*foreground:          #c7c8d2
-URxvt*cursorColor:         #ffffff
+URxvt*background:          #263238
+URxvt*foreground:          #eceff1
+URxvt*cursorColor:         #eeeeee
 
 URxvt.internalBorder:      15
 URxvt.externalBorder:      0
@@ -56,11 +56,9 @@ URxvt.scrollBar:           false
 
 URxvt*fading:              30
 
-URxvt.keysym.F11:          perl:fullscreen:switch
-
-URxvt.url-launcher:        /usr/bin/chromium
+URxvt.url-launcher:        /usr/bin/firefox
 URxvt.keysym.M-Delete:     perl:matcher:list
-URxvt.colorUL:             #7780a1
+URxvt.colorUL:             #005cbb
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
