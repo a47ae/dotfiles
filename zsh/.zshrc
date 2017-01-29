@@ -11,7 +11,11 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git archlinux composer tmuxinator wd ssh-agent)
+if [[ $(uname) == 'Linux' ]]; then
+  plugins=(git archlinux composer ssh-agent wd)
+elif [[ $(uname) == 'Darwin' ]]; then
+  plugins=(git osx brew composer wd)
+fi
 
 # User configuration
 export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
@@ -28,8 +32,8 @@ else
   export EDITOR='nano'
 fi
 
-# Start x session automatically
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+# Start x session automatically on Linux
+if [[ $(uname) == 'Linux' ]] &&  [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
 fi
 
@@ -41,9 +45,6 @@ fi
 # Alias for easier clipborad pasting
 alias xclip="xclip -selection c"
 
-# Tmuxinator alias
-alias mux="tmuxinator"
-
 # Scrap all changes
 alias nah="git reset --hard;git clean -df;"
 
@@ -52,11 +53,7 @@ alias art="php artisan"
 alias tinker="php artisan tinker"
 
 # Can not remember that name...
-alias music="ncmpcpp"
+alias music="ncmpc"
 
 # Mopidy Iris http client
-alias spotify="chromium --app=http://localhost:6680/iris"
-
-function tmw {
-    tmux split-window -dh "$*"
-}
+alias spotify="firefox http://localhost:6680/iris"
