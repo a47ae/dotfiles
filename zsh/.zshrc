@@ -34,7 +34,7 @@ fi
 
 # Start x session automatically on Linux
 if [[ $(uname) == 'Linux' ]] &&  [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  exec startx
+  exec startx -- vt1 &> /dev/null
 fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -57,3 +57,7 @@ alias music="ncmpc"
 
 # Mopidy Iris http client
 alias spotify="firefox http://localhost:6680/iris"
+
+# Audio output switch
+alias speaker="sudo switch-sound speaker -r"
+alias headphones="sudo switch-sound headphones -r"
