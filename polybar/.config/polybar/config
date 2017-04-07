@@ -24,7 +24,7 @@ margin-top = 5
 margin-bottom = 5
 
 [bar/bar1]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:DisplayPort-2}
 width = 100%
 height = 35
 offset-x = 0
@@ -45,11 +45,14 @@ font-1 = FontAwesome:size=10;0
 
 modules-left = i3
 modules-center = date
-modules-right = eth volume
+modules-right = eth volume power
 
 tray-position = right
+tray-detached = false
 tray-padding = 1
-tray-transparent = true
+tray-transparent = false
+tray-maxsize = 20
+tray-background = ${root.background}
 
 [module/i3]
 type = internal/i3
@@ -118,5 +121,23 @@ label-volume =   %percentage%
 
 label-muted = muted
 format-muted-foreground = #5b
+
+[module/power]
+type = custom/menu
+
+format-underline = ${colors.yellow}
+
+label-open = 
+label-close = 
+
+label-separator = -
+label-separator-padding = 4
+
+menu-0-0 = 
+menu-0-0-exec = shutdown now
+menu-0-1 = 
+menu-0-1-exec = reboot
+menu-0-2 = 
+menu-0-2-exec = systemctl suspend
 
 ; vim:ft=dosini
