@@ -196,9 +196,9 @@ exec_always --no-startup-id  sh ~/.fehbg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Put windows to workspaces
-assign [class="URxvt"] 1
-assign [class="Firefox"] 2
-assign [class="^.*" title=" - Chromium$"] 2
+#assign [class="URxvt"] 1
+#assign [class="Firefox"] 2
+#assign [class="^.*" title=" - Chromium$"] 2
 #assign [class="jetbrains-phpstorm"] 3
 
 # Assign workspaces to screens
@@ -211,3 +211,7 @@ workspace 6 output $monitor_two
 workspace 7 output $monitor_two
 workspace 8 output $monitor_two
 workspace 9 output $monitor_two
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
