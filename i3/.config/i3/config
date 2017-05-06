@@ -215,3 +215,6 @@ workspace 9 output $monitor_two
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
+# Automatically start firefox and urxvt on startup
+exec --no-startup-id i3-msg 'workspace 2; exec firefox'
+exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
