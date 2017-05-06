@@ -61,3 +61,5 @@ alias spotify="firefox http://localhost:6680/iris"
 # Audio output switch
 alias speaker="sudo switch-sound speaker -r"
 alias headphones="sudo switch-sound headphones -r"
+
+export PATH="$HOME/.yarn/bin:$PATH"
