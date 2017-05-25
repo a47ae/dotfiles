@@ -18,7 +18,7 @@ elif [[ $(uname) == 'Darwin' ]]; then
 fi
 
 # User configuration
-export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,29 +37,5 @@ if [[ $(uname) == 'Linux' ]] &&  [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$
   exec startx -- vt1 &> /dev/null
 fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# Alias for easier clipborad pasting
-alias xclip="xclip -selection c"
-
-# Scrap all changes
-alias nah="git reset --hard;git clean -df;"
-
-# Laravel aliases
-alias art="php artisan"
-alias tinker="php artisan tinker"
-
-# Can not remember that name...
-alias music="ncmpc"
-
-# Mopidy Iris http client
-alias spotify="firefox http://localhost:6680/iris"
-
-# Audio output switch
-alias speaker="sudo switch-sound speaker -r"
-alias headphones="sudo switch-sound headphones -r"
-
-export PATH="$HOME/.yarn/bin:$PATH"
+# Include aliases
+source ”/.zsh/aliases.zsh
